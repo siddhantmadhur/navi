@@ -8,6 +8,10 @@ use tokio::{
 
 mod bluetooth;
 
+#[cfg(not(target_os = "linux"))]
+compile_error!("This program is only designed for Linux.");
+
+
 #[tokio::main(flavor = "current_thread")]
 async fn main() -> bluer::Result<()> {
 
