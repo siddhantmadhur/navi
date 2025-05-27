@@ -12,3 +12,5 @@ pub fn list_devices() -> Arc<Mutex<Vec<BluetoothDevice>>> {
     
     return devices;
 }
+
+
